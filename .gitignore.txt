@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 .DS_Store
 node_modules/
 *.log
 prepros-*
 Thumbs.db
+=======
+.DS_Store
+node_modules/
+*.log
+prepros-*
+Thumbs.db
+>>>>>>> fc4ab1e (موقع ساندويتش كورة)
 Desktop.ini
