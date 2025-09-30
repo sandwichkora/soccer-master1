@@ -27,4 +27,5 @@ collections:
         ] }
       - { label: "الملخص", name: "summary", widget: "text" }
       - { label: "المحتوى", name: "body", widget: "markdown" }
+ لإضافة الأقسام الرياضية Netlify CMS توسيع إعداد 
 
