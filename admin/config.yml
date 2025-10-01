@@ -1,0 +1,31 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "sports_sections"
+    label: "الأقسام الرياضية"
+    folder: "content/sports"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "العنوان", name: "title", widget: "string" }
+      - { label: "تاريخ النشر", name: "date", widget: "datetime" }
+      - { label: "القسم", name: "section", widget: "select", options: [
+          "الدوري المصري", "الأهلي", "الزمالك",
+          "الدوري السعودي", "الدوري الكويتي", "الدوري القطري", "الدوري الإماراتي",
+          "الدوري المغربي", "الدوري التونسي", "الدوري الجزائري",
+          "الدوري الإنجليزي", "الدوري الإسباني", "الدوري الإيطالي", "الدوري الألماني", "الدوري الفرنسي",
+          "محمد صلاح", "ليفربول",
+          "كأس العالم", "كأس الأمم الأوروبية", "دوري أبطال أوروبا",
+          "دوري أبطال آسيا", "بطولة الأمم الآسيوية",
+          "دوري أبطال أفريقيا", "كأس الأمم الأفريقية", "الكونفدرالية الأفريقية",
+          "الكؤوس المحلية"
+        ] }
+      - { label: "الملخص", name: "summary", widget: "text" }
+      - { label: "المحتوى", name: "body", widget: "markdown" }
+
+# توسيع إعداد Netlify CMS لإضافة الأقسام الرياضية
