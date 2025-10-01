@@ -1,6 +1,12 @@
 backend:
   name: git-gateway
   branch: main
+  login: false
+
+auth:
+  use_auth0: true
+  auth0_domain: dev-rp1upny5p0adb1rr.us.auth0.com
+  auth0_client_id: 3ZK7gQvYwU7U1Jj13s6ETNEw8zkF
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
@@ -28,5 +34,28 @@ collections:
       - { label: "الملخص", name: "summary", widget: "text" }
       - { label: "المحتوى", name: "body", widget: "markdown" }
 
+  - name: "matches"
+    label: "نتائج المباريات"
+    folder: "content/matches"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "الفريق الأول", name: "team1", widget: "string" }
+      - { label: "الفريق الثاني", name: "team2", widget: "string" }
+      - { label: "النتيجة", name: "score", widget: "string" }
+      - { label: "تاريخ المباراة", name: "date", widget: "datetime" }
+
+  - name: "standings"
+    label: "ترتيب الفرق"
+    folder: "content/standings"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "اسم الفريق", name: "team", widget: "string" }
+      - { label: "النقاط", name: "points", widget: "number" }
+      - { label: "عدد المباريات", name: "games", widget: "number" }
+      - { label: "المركز", name: "rank", widget: "number" }
 # توسيع إعداد Netlify CMS لإضافة الأقسام الرياضية
+
+
 
