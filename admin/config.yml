@@ -29,4 +29,4 @@ collections:
       - { label: "المحتوى", name: "body", widget: "markdown" }
 
 # توسيع إعداد Netlify CMS لإضافة الأقسام الرياضية
-.
+
