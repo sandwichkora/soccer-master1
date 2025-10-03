@@ -5,8 +5,8 @@ backend:
 
 auth:
   use_auth0: true
-  auth0_domain: dev-npiunpv5pob3vrpp.us.auth0.com
-  auth0_client_id: 3bM2XqwdDgvkTUwYJJj13sGEhYERn8kF
+  auth0_domain: dev-rp1upny5p0adb1rr.us.auth0.com
+  auth0_client_id: 3ZK7gQvYwU7U1Jj13s6ETNEw8zkF
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
@@ -55,7 +55,3 @@ collections:
       - { label: "النقاط", name: "points", widget: "number" }
       - { label: "عدد المباريات", name: "games", widget: "number" }
       - { label: "المركز", name: "rank", widget: "number" }
-# توسيع إعداد Netlify CMS لإضافة الأقسام الرياضية
-
-
-
