@@ -38,42 +38,40 @@
     <button id="logout" style="display:none;">تسجيل الخروج</button>
 
     <script>
-      let auth0;
+      let auth0Client;
 
       async function initAuth0() {
-        auth0 = new auth0spa.Auth0Client({
+        auth0Client = new auth0.Auth0Client({
           domain: "dev-rp1upny5p0adb1rr.us.auth0.com",
           client_id: "3ZK7gQvYwU7U1Jj13s6ETNEw8zkF",
           redirect_uri: window.location.origin + "/admin/"
         });
 
-        const isAuthenticated = await auth0.isAuthenticated();
+        const isAuthenticated = await auth0Client.isAuthenticated();
 
         if (isAuthenticated) {
           document.getElementById("login").style.display = "none";
           document.getElementById("logout").style.display = "inline-block";
-          const user = await auth0.getUser();
+          const user = await auth0Client.getUser();
           console.log("مرحبًا، " + user.name);
         } else {
           const query = window.location.search;
           if (query.includes("code=") && query.includes("state=")) {
-            await auth0.handleRedirectCallback();
+            await auth0Client.handleRedirectCallback();
             window.history.replaceState({}, document.title, "/admin/");
           }
         }
       }
 
       document.getElementById("login").addEventListener("click", () => {
-        auth0.loginWithRedirect();
+        auth0Client.loginWithRedirect();
       });
 
       document.getElementById("logout").addEventListener("click", () => {
-        auth0.logout({ returnTo: window.location.origin + "/admin/" });
+        auth0Client.logout({ returnTo: window.location.origin + "/admin/" });
       });
 
       initAuth0();
     </script>
   </body>
 </html>
-
-
