@@ -3,11 +3,10 @@ backend:
   branch: main
   login: false
 
-   auth:
+auth:
   use_auth0: true
   auth0_domain: dev-npiunpv5pob3vrpp.us.auth0.com
   auth0_client_id: 3bM2XqwdDgvkTUwYJJj13sGEhYERn8kF
-
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
