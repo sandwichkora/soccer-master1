@@ -8,8 +8,8 @@ auth:
   auth0_domain: dev-npiunpv5pob3vrpp.us.auth0.com
   auth0_client_id: 3bM2XqwdDgvkTUwYJJj13sGEhYERn8kF
 
-media_folder: "static/images/uploads"
-public_folder: "/images/uploads"
+media_folder: "images/uploads"
+public_folder: "/soccer-master1/images/uploads"
 
 collections:
   - name: "sports_sections"
